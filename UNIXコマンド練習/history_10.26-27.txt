@@ -1,0 +1,304 @@
+[root@hirayama ]# history
+    1  history
+    2  ls -la
+    3  cd /var/www/html
+    4  cd /var/www
+    5  cd /var
+    6  ls -la
+    7  history
+    8  useradd test
+    9  useradd testuser
+   10  cd
+   11  cd /etc
+   12  cd default
+   13  ls -la
+   14  cd useradd
+   15  vi useradd
+   16  cd
+   17  passwd testuser
+   18  userdel test
+   19  history
+   20  date
+   21  ls -F /user/share/zoneinfo
+   22  cd /user/share
+   23  cd/user
+   24  cd /usr/share
+   25  ls -la
+   26  cd zoneinfo
+   27  ls -la
+   28  ls -l /etc/localtime
+   29  date --utc
+   30  timedatectl
+   31  pwd
+   32  cd
+   33  pwd
+   34  ls -la
+   35  touch test
+   36  cd /test
+   37  cd test
+   38  ls -la
+   39  rm test
+   40  touch test.html
+   41  vi test.html
+   42  more test.html
+   43  history
+   44  groups
+   45  groups testuser
+   46  id
+   47  ls -l
+   48  chmod 755 test.html
+   49  ls -l
+   50  umask
+   51  chown testuser test.html
+   52  ls -l
+   53  chown testuser testuser test.html
+   54  touch test2.html
+   55  ls -la
+   56  chmod 755 test2.html
+   57  ls -la
+   58  ln test2.html test3.html
+   59  vi test2.html
+   60  cat test3.html
+   61  rm test2.html
+   62  cat test3.html
+   63  mkdir testdir
+   64  ls -la
+   65  touch findtest.html /testdir
+   66  ls -la
+   67  mv findtest.html testdir
+   68  ls -la
+   69  cd testdir
+   70  ls -la
+   71  vi findtest.html
+   72  cd
+   73  find / -name test
+   74  find / -name test%
+   75  ls -la
+   76  find / -mtime 7
+   77  find / -atime -7
+   78  find . -type l
+   79  history
+   80  locate test.html
+   81  which usermod
+   82  whereeis which
+   83  whereis which
+   84  last
+   85  who
+   86  w
+   87  cd testdir
+   88  touch hello.sh
+   89  vi hello.sh
+   90  chmod 755 hello.sh
+   91  ls- la
+   92  ls -la
+   93  ./hello.sh
+   94  sh hello.sh
+   95  touch option.sh
+   96  vi option.sh 
+   97  ./ option.sh
+   98  ./option.sh
+   99  chmod 755 option.sh
+  100  ./option.sh
+  101  bash -e option.sh
+  102  systemctl status crond
+  103  sytemctl status crond
+  104  systemctl status crond
+  105  systemctl stop crond
+  106  sytemctl status crond
+  107  systemctl status crond
+  108  systemctl is-enabled crond
+  109  systemctl start crond
+  110  systemctl is-enabled crond
+  111  systemctl status crond
+  112  cat /etc/crontab
+  113  crontab -e
+  114  history
+  115  cd
+  116  yum list installed
+  117  yum info bash
+  118  cat /etc/yum.conf
+  119  pwd
+  120  ps
+  121  ps -p 1361
+  122  pstree
+  123  pstree -p
+  124  ps -1
+  125  top
+  126  jobs
+  127  history
+  128  pgrep bc
+  129  echo $DATE
+  130  echo $date
+  131  man
+  132  man man
+  133  file /bin/bash
+  134  file /etc
+  135  ls -la
+  136  cat test.html test3.html test2.html
+  137  ls -la
+  138  nl /etc/passwd
+  139  od /etc/localtime
+  140  od -t x /etc/localtime
+  141  od -t c /etc/localtime
+  142  head /var/log/messages
+  143  head -5 /var/log/messages
+  144  head -2 /var/log/messages
+  145  tail -f /var/log/messages
+  146  cut -c 5 /etc/resolv.conf
+  147  paste -d";" test.html test3.html
+  148  wc /etc/services
+  149  ls | wc -l
+  150  ls -la
+  151  grep -i He test.html
+  152  egrep '/s(22)/tcp' /etc/service
+  153  ps ax
+  154  history
+  155  tail -f /var/log/messages
+  156  bg1
+  157  bg 1
+  158  jobs
+  159  free
+  160  free -m 
+  161  uptime
+  162  watch -n 5 uptime
+  163  tmux
+  164  tmux ls 
+  165  lsblk
+  166  fdisk -l /dev/sda
+  167  fdisk /dev/sdb
+  168  df -h
+  169  df- i
+  170  df -i
+  171  ls -l
+  172  ls -l testdir
+  173  du
+  174  du -s testdir
+  175  du -S
+  176  du -c
+  177  du -a
+  178  cat /etc/fstab
+  179  blkid
+  180  mount
+  181  ls -la
+  182  mkdir
+  183  mkdir test2dir
+  184  mkdir test3dir
+  185  ls -la
+  186  cd testdir
+  187  ls -la
+  188  cd ..
+  189  mount -t findtest.html /root/testdir /root/test2dir
+  190  mount /root/test2dir
+  191  ls -la
+  192  locate "*.sh"
+  193  cat /etc/rsyslog.conf
+  194  systemctl restart rsyslog
+  195  logger -p syslog.info -t Test "logger test message"
+  196  systemd-cat uptime
+  197  journalctl -xe
+  198  tail -f /vae/log/messages
+  199  tail -f /var/log/messages
+  200  grep eth0 /var/log/messages
+  201  who
+  202  w
+  203  lastlog
+  204  history
+  205  journalctl
+  206  joutnalctl -u ssh.service
+  207  journalctl -u ssh.service
+  208  vi /etc/logrotated.conf
+  209  vi /etc/logrotate.conf
+  210  netstat -atnp | grep 25
+  211  cat /etc/hostname
+  212  hostname
+  213  vi /etc/hosts
+  214  vi /etc/network/interfaces
+  215  systemctl status NetWorkManager
+  216  hostnamectl
+  217  ping 127.0.0.1
+  218  traceroute hirayama.co.jp
+  219  tracepath hirayama.co.jp
+  220  netstat
+  221  netstat -at
+  222  netstat -r
+  223  route
+  224  route add default gw 127.30.0.1
+  225  route add -net 192.168.0.0 netmask 255.255.255.0 gw 172.30.0.254
+  226  history
+  227  route del -net 192.168.0.0 netmask 255.255.255.0 gw 172.30.0.254
+  228  ls -la
+  229  ip route show 
+  230  ip link show 
+  231  ip addr show eth0
+  232  ifconfig
+  233  vi /etc/resolv.conf
+  234  vi /etc/nsswitch.conf
+  235  systemctl restart systemd-resolved.service
+  236  dig
+  237  cd /etc/systemd/system
+  238  ls -la
+  239  vi telnet.socket
+  240  netstat -stu
+  241  netstat -atu
+  242  ss -atu
+  243  lsof -i
+  244  history
+  245  ps aux | sort -n -k 6 | tail -n 10
+  246  lsof -Pan -i tcp -i udp
+  247  du -m / --max-depth=3 --exclude="/proc*" | sort -k1 -n -r
+  248  cd
+  249  ls -la
+  250  cd testdir
+  251  ls -la
+  252  touch test-{001..10}
+  253  ls -la
+  254  mv test-001 test-001.sh
+  255  ls -la
+  256  chmod 755 test-001.sh
+  257  ls -la
+  258  vi test-001.sh 
+  259  ./test-001.sh
+  260  chmod 755 *
+  261  ls- la
+  262  ls -la
+  263  mv test-002 test-002.sh 
+  264  vi test-002.sh 
+  265  ./test-002.sh
+  266  history
+  267  alias
+  268  alias h='history 10'
+  269  alias
+  270  alias h
+  271  h
+  272  unalias h
+  273  alias
+  274  h
+  275  file_name=/root/testdir/test.html
+  276  basename${file_name}
+  277  cal
+  278  date
+  279  clear
+  280  ls -la
+  281  compress -v *.html
+  282  ls -la
+  283  cd /var/
+  284  ls -la
+  285  cd
+  286  cd /testdir
+  287  cd testdir
+  288  ls -la
+  289  diff test-001.sh test-002.sh
+  290  diff -q  test-001.sh test-002.sh
+  291  diff -c test-001.sh test-002.sh
+  292  df
+  293  du
+  294  vi /etc/yum.conf
+  295  ls /etc/yum.repos.d/
+  296  yum check-update
+  297  yumupdate
+  298  yum update
+  299  yum install openssl
+  300  yum install httpd
+  301  yum install tomcat7-webapps
+  302  history
+
