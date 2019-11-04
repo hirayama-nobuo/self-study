@@ -26,7 +26,7 @@ network_configuration {
     security_groups  = ["${module.test_sg.security_group_id}"]
 
     subnets = [
-      "${aws_subnet.private_subnet.id}"
+      "${aws_subnet.public_subnet.id}"
     ]
 }
      lifecycle {

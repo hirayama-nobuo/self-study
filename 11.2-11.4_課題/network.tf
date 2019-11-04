@@ -77,6 +77,6 @@ module "test_sg" {
   name        = "hirayama-test-sg"
   vpc_id      = "${aws_vpc.vpc.id}"
   port        = 80
-  cidr_blocks = ["106.154.130.252/32"]
+  cidr_blocks = ["106.154.131.43/32"]
 }
 
