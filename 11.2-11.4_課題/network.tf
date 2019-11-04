@@ -49,10 +49,18 @@ resource "aws_subnet" "private_subnet2" {
 
 resource "aws_internet_gateway" "internet_gateway" {
   vpc_id = "${aws_vpc.vpc.id}"
+
+  tags {
+    Name = "hirayama-test-igw"
+  }
 }
 
 resource "aws_route_table" "public" {
   vpc_id = "${aws_vpc.vpc.id}"
+
+  tags{
+    Name = "hirayama-test-public"
+  }
 }
 
 resource "aws_route" "public" {
@@ -73,6 +81,10 @@ resource "aws_route_table_association" "public2" {
 
 resource "aws_route_table" "private" {
   vpc_id = "${aws_vpc.vpc.id}"
+
+  tags{
+    Name = "hirayama-test-private"
+  }
 }
 
 resource "aws_route_table" "private2" {
@@ -87,11 +99,19 @@ resource "aws_route_table_association" "private" {
 resource "aws_eip" "nat_gateway" {
   vpc        = true
   depends_on = ["aws_internet_gateway.internet_gateway"]
+
+  tags{
+    Name = "hirayama-test-nat1"
+  }
 }
 
 resource "aws_eip" "nat_gateway2" {
   vpc        = true
   depends_on = ["aws_internet_gateway.internet_gateway"]
+
+  tags{
+    Name = "hirayama-test-nat2"
+  }
 }
 
 resource "aws_nat_gateway" "nat_gateway" {
@@ -134,5 +154,9 @@ module "test_sg" {
   vpc_id      = "${aws_vpc.vpc.id}"
   port        = 80
   cidr_blocks = ["106.154.131.43/32"]
+
+  tags {
+    Name = "hirayama-test-sg"
+  }
 }
 
