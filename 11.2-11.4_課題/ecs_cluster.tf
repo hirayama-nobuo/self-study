@@ -1,8 +1,8 @@
-resource "aws_ecs_cludter" "ecs_cluster" {
+resource "aws_ecs_cluster" "ecs_cluster" {
    name = "hirayama-test-ecs_cluster"
 }
 
-resource "aws_task_definition" "task_definition" {
+resource "aws_ecs_task_definition" "task_definition" {
     family = "hirayama-test"
     cpu = "256"
     memory = "512"
