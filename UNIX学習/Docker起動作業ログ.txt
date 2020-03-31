@@ -1,0 +1,192 @@
+hirayambuonoAir:~ root# docker run -d -p 80:80 --name webserver nginx
+-sh: docker: command not found
+hirayambuonoAir:~ root# 
+hirayambuonoAir:~ root# 
+hirayambuonoAir:~ root# 
+hirayambuonoAir:~ root# docker run -d -p 80:80 --name webserver nginx
+docker: Error response from daemon: dial unix docker.raw.sock: connect: no such file or directory.
+See 'docker run --help'.
+hirayambuonoAir:~ root# docker version
+Client: Docker Engine - Community
+ Version:           19.03.8
+ API version:       1.40
+ Go version:        go1.12.17
+ Git commit:        afacb8b
+ Built:             Wed Mar 11 01:21:11 2020
+ OS/Arch:           darwin/amd64
+ Experimental:      false
+Server: Docker Engine - Community
+ Engine:
+  Version:          19.03.8
+  API version:      1.40 (minimum version 1.12)
+  Go version:       go1.12.17
+  Git commit:       afacb8b
+  Built:            Wed Mar 11 01:29:16 2020
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          v1.2.13
+  GitCommit:        7ad184331fa3e55e52b890ea95e65ba581ae3429
+ runc:
+  Version:          1.0.0-rc10
+  GitCommit:        dc9208a3303feef5b3839f4323d9beb36df0a9dd
+ docker-init:
+  Version:          0.18.0
+  GitCommit:        fec3683
+hirayambuonoAir:~ root# docker
+Usage:  docker [OPTIONS] COMMAND
+A self-sufficient runtime for containers
+Options:
+      --config string      Location of client config files (default
+                           "/var/root/.docker")
+  -c, --context string     Name of the context to use to connect to the
+                           daemon (overrides DOCKER_HOST env var and
+                           default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level
+                           ("debug"|"info"|"warn"|"error"|"fatal")
+                           (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default
+                           "/var/root/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default
+                           "/var/root/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default
+                           "/var/root/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+Management Commands:
+  builder     Manage builds
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  image       Manage images
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+Run 'docker COMMAND --help' for more information on a command.
+hirayambuonoAir:~ root# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+hirayambuonoAir:~ root# docker run hello-world
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+1b930d010525: Pull complete 
+Digest: sha256:f9dfddf63636d84ef479d645ab5885156ae030f611a56f3a7ac7f2fdd86d7e4e
+Status: Downloaded newer image for hello-world:latest
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+hirayambuonoAir:~ root# docker run -d -p 80:80 --name webserver nginx
+Unable to find image 'nginx:latest' locally
+latest: Pulling from library/nginx
+68ced04f60ab: Pull complete 
+28252775b295: Pull complete 
+a616aa3b0bf2: Pull complete 
+Digest: sha256:2539d4344dd18e1df02be842ffc435f8e1f699cfc55516e2cf2cb16b7a9aea0b
+Status: Downloaded newer image for nginx:latest
+3b852a09cfbb7d3c728f97fffb103f5b4dfa2b463dbbda5bd5bc8483f7644d9f
+hirayambuonoAir:~ root# 
+hirayambuonoAir:~ root# 
+hirayambuonoAir:~ root# 
+hirayambuonoAir:~ root# docker run -it webserver bash
+Unable to find image 'webserver:latest' locally
+docker: Error response from daemon: pull access denied for webserver, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+hirayambuonoAir:~ root# docker run -td --name centos6.8 docker.io/centos:centos6.8
+Unable to find image 'centos:centos6.8' locally
+centos6.8: Pulling from library/centos
+7ce0cebb9dca: Pull complete 
+Digest: sha256:39abd0c8e375de6fb7334d42ec2a46643f34cbc1bbaf37e2b484065f05eaa7a2
+Status: Downloaded newer image for centos:centos6.8
+98828fdc958b6b75e1e2e0fad427f008240fb2f84ec02377c1c944f6dc1fc971
+hirayambuonoAir:~ root# docker exec -it centos6.8 /bin/bash
+[root@98828fdc958b /]# ls -la
+total 72
+drwxr-xr-x   1 root root 4096 Mar 30 11:31 .
+drwxr-xr-x   1 root root 4096 Mar 30 11:31 ..
+-rwxr-xr-x   1 root root    0 Mar 30 11:30 .dockerenv
+dr-xr-xr-x   2 root root 4096 Jun  2  2016 bin
+drwxr-xr-x   5 root root  360 Mar 30 11:31 dev
+drwxr-xr-x   1 root root 4096 Mar 30 11:30 etc
+drwxr-xr-x   2 root root 4096 Sep 23  2011 home
+dr-xr-xr-x   7 root root 4096 Jun  2  2016 lib
+dr-xr-xr-x   5 root root 4096 Jun  2  2016 lib64
+drwx------   2 root root 4096 Jun  2  2016 lost+found
+drwxr-xr-x   2 root root 4096 Sep 23  2011 media
+drwxr-xr-x   2 root root 4096 Sep 23  2011 mnt
+drwxr-xr-x   2 root root 4096 Sep 23  2011 opt
+dr-xr-xr-x 165 root root    0 Mar 30 11:31 proc
+dr-xr-x---   2 root root 4096 Jun  2  2016 root
+dr-xr-xr-x   2 root root 4096 Jun  2  2016 sbin
+drwxr-xr-x   2 root root 4096 Jun  2  2016 selinux
+drwxr-xr-x   2 root root 4096 Sep 23  2011 srv
+dr-xr-xr-x  13 root root    0 Mar 30 11:31 sys
+drwxrwxrwt   2 root root 4096 Jun  2  2016 tmp
+drwxr-xr-x  13 root root 4096 Jun  2  2016 usr
+drwxr-xr-x  17 root root 4096 Jun  2  2016 var
+[root@98828fdc958b /]# 
+[root@98828fdc958b /]# 
+[root@98828fdc958b /]# 
+[root@98828fdc958b /]# 
